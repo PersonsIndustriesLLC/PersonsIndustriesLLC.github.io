@@ -327,3 +327,87 @@ header nav a {
     height: 100px;
     width: 250px;
 }
+
+.contact-us {
+    font-family: Arial, sans-serif;
+    padding: 50px 15px;
+    margin: 0 auto;
+    max-width: 700px;
+    box-sizing: border-box;
+}
+
+.contact-us form {
+    padding: 30px;
+    border: #000;
+}
+
+.contact-us h2 {
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.contact-us .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-us label {
+    font-weight: bold;
+    color: #000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us textarea {
+    width: 96%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #000;
+}
+
+.contact-us textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-us button {
+    background-color: #274c69;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-us button:hover {
+    background-color: #274c69;
+}
+
+.contact-us .form-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-us .form-footer p {
+    font-size: 14px;
+    color: #000;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 768px) {
+    .contact-us {
+        padding: 30px 15px;
+    }
+
+    .contact-us form {
+        padding: 20px;
+    }
+}
