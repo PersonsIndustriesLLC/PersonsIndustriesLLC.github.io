@@ -6,7 +6,7 @@
         <title>Persons Industries LLC</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <header>
@@ -14,8 +14,7 @@
             <nav>
                 <a href="#services">Services</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
+                <a href="#contact-us">Contact</a>
             </nav>
         </header>
 
@@ -23,15 +22,15 @@
             <h1>Engineering For The Future</h1>
             <p>Empowering progress with innovative engineering solutions that deliver excellence and drive success.</p>
             <div class="cta-buttons">
-                <a href="#" class="purchase">Contact Us</a>
+                <a href="#contact-us" class="purchase">Contact Us</a>
             </div>
         </section>
 
-        <section class="services-heading">
+        <section class="services-heading" id="services">
             <br><h1>Our Services</h1>
         </section>
 
-        <section class="services" id="services">
+        <section class="services">
             <div class="service">
                 <i class="bi bi-robot icon icon-background"></i>
                 <h3>Autonomous Systems</h3>
@@ -64,11 +63,11 @@
             </div>
         </section>
 
-        <section class="services-heading">
+        <section class="services-heading"  id="portfolio">
             <h1>Portfolio</h1>
         </section>
 
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio">
             <div class="carousel-container">
                 <div class="carousel">
                     <div class="carousel__cell">
@@ -213,8 +212,63 @@
             </script>
         </section><br>
 
+        <section class="services-heading" id="contact-us">
+            <br><h1>Contact Us</h1>
+        </section>
+
+        <section class="contact-us">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
+                </div>
+        
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                </div>
+        
+                <button type="submit">Send Message</button>
+            </form>
+        
+            <div class="form-footer">
+                <p>We will get back to you as soon as possible!</p>
+            </div>
+        </section><br>
+        <script>
+            // Add event listener to handle form submission
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form from submitting (default action)
+        
+                // Get form values
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var subject = document.getElementById("subject").value;
+                var message = document.getElementById("message").value;
+        
+                // Construct the mailto link with the form data
+                var mailtoLink = "mailto:your-email@example.com?subject=" + encodeURIComponent(subject) + 
+                                 "&body=" + encodeURIComponent("Name: " + name + "\n" +
+                                                               "Email: " + email + "\n" +
+                                                               "Message: \n" + message);
+        
+                // Redirect to the mailto link to open the email client
+                window.location.href = mailtoLink;
+            });
+        </script>        
+
         <section class="services-heading">
-            <br><h1>Our Customers</h1>
+            <br><h1>Our Customers</h1><br>
         </section>
 
         <section class="customer-logos">
