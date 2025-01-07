@@ -1,0 +1,329 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #fff;
+}
+
+header {
+    padding-left: 2em;
+    position: fixed;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #fff;
+    border-bottom: solid;
+    border-color: #000;
+}
+
+header.scrolled nav a {
+    color: #000 !important;
+}
+
+header nav {
+    position: fixed;
+    right: 1em;
+}
+
+header .logo img {
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: auto;
+    height: 7em;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    padding: 10em 10em;
+    background: url('./images/banner.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-buttons a {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero .cta-buttons .purchase {
+    background: #152A3B;
+}
+
+.hero .cta-buttons .contact {
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    color: #000;
+}
+
+.services .service {
+    max-width: 300px;
+    position: relative;
+}
+
+.services .service .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.services .service .icon:hover {
+    transform: scale(1.2);
+}
+
+.services .service .icon-background {
+    background-color: #152A3B;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+.services .service:nth-child(2) .icon-background {
+    background-color: #F2D1A3;
+}
+
+.services .service:nth-child(3) .icon-background {
+    background-color: #A3B18C;
+}
+
+.services .service:nth-child(4) .icon-background {
+    background-color: #776D5A;
+}
+
+.services .service:nth-child(5) .icon-background {
+    background-color: #E68A2E;
+}
+
+.services .service:nth-child(6) .icon-background {
+    background-color: #345830;
+}
+
+.services .service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.services .service p {
+    font-size: 1rem;
+}
+
+.services-heading {
+    position: relative;
+    text-align: center;
+    color: #000;
+    font-size: 1.75rem;
+}
+
+/* Ensure the services container is a flex container */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center the items horizontally */
+    gap: 30px;  /* Add spacing between the service items */
+    margin: 20px auto;  /* Center the whole section */
+}
+
+/* Style each service item */
+.service {
+    width: calc(33.33% - 20px); /* Default to 3 items per row with a small gap */
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* On hover, apply the pop-out effect */
+.service:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover i {
+    transform: scale(1.2);  /* Enlarge icon on hover */
+}
+
+/* Adjust number of columns based on screen size */
+@media (max-width: 1200px) {
+    .service {
+        width: calc(50% - 20px); /* 2 items per row on medium-sized screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        width: 100%; /* 1 item per row on smaller screens */
+    }
+}
+
+.portfolio {
+    text-align: center;
+    padding: 20px;
+    color: #000;
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel__cell {
+    flex: 0 0 33.33%; /* Ensure 3 items are shown at once */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .paper-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+  }
+  
+  .paper-image {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+  
+  .paper-details {
+    padding-top: 10px;
+    flex-grow: 0; /* Prevent the text container from expanding unnecessarily */
+    height: auto; /* Allow the details section to adjust to the content */
+  }
+  
+  .paper-details h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .paper-details .description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  .buttons-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .previous-button, .next-button {
+    padding: 10px 20px;
+    background-color: #152A3B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .previous-button:hover, .next-button:hover {
+    background-color: #274c69;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 3)) } /* Move only 3 logos at a time */
+}
+
+.slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 750px; /* Width for 3 logos at 250px each */
+}
+
+.slide-track {
+    animation: scroll 20s linear infinite; /* You can adjust the timing as needed */
+    display: flex;
+    width: calc(250px * 6); /* 6 logos in total to ensure the loop works seamlessly */
+}
+
+.slide {
+    height: 100px;
+    width: 250px;
+}
