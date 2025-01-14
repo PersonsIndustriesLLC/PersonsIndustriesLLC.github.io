@@ -414,6 +414,18 @@ header nav a {
     .contact-us form {
         padding: 20px;
     }
+
+    .hero h1 {
+        font-size: 4vw;
+    }
+    
+    .hero p {
+        font-size: 2vw;
+    }
+
+    .hero .cta-buttons a {
+        font-size: 2vw;
+    }
 }
 
 @media screen and (max-width: 1345px) {
