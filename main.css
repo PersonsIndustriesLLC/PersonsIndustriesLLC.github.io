@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #fff;
-    color: #fff;
+    color: #000;
 }
 
 header {
@@ -24,14 +24,8 @@ header {
     transition: background-color 0.3s ease;
 }
 
-header.scrolled {
-    background-color: #fff;
-    border-bottom: solid;
-    border-color: #000;
-}
-
-header.scrolled nav a {
-    color: #000 !important;
+header.scrolled .logo img {
+    display: none;
 }
 
 header nav {
@@ -43,19 +37,20 @@ header .logo img {
     font-size: 1.5rem;
     font-weight: bold;
     width: auto;
-    height: 7em;
+    height: 12vw;
 }
 
 header nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 .hero {
     text-align: center;
-    padding: 10em 10em;
-    background: url('./images/banner.jpg') no-repeat center center/cover;
+    padding: 12vw 12vw;
+    background: url('./images/banner.jpg') no-repeat;
+    background-size: 100% 100%;
     position: relative;
 }
 
@@ -66,21 +61,26 @@ header nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3vw;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    width: 40%;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
+    width: 40%;
+}
+
+.hero .cta-buttons {
+    width: 40%;
 }
 
 .hero .cta-buttons a {
@@ -92,6 +92,7 @@ header nav a {
     border-radius: 5px;
     position: relative;
     z-index: 1;
+    font-size: 1.5vw;
 }
 
 .hero .cta-buttons .purchase {
@@ -246,9 +247,10 @@ header nav a {
   }
   
   .carousel__cell {
-    flex: 0 0 33.33%; /* Ensure 3 items are shown at once */
+    flex: 0 0 100%; /* Ensure 3 items are shown at once */
     box-sizing: border-box;
     padding: 10px;
+    justify-content: center;
   }
   
   .paper-card {
@@ -256,6 +258,8 @@ header nav a {
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    height: 50vh;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content at the top */
@@ -264,7 +268,7 @@ header nav a {
   
   .paper-image {
     width: 100%;
-    height: 200px; /* Fixed height for images */
+    height: 30vh; /* Fixed height for images */
     object-fit: cover; /* Ensures the image covers the area without distortion */
   }
   
@@ -409,5 +413,11 @@ header nav a {
 
     .contact-us form {
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1345px) {
+    .paper-card {
+        width: 90%;
     }
 }
