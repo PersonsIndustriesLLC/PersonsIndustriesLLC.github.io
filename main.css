@@ -85,14 +85,14 @@ header nav a {
 
 .hero .cta-buttons a {
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 0.95vw 0.95vw;
     margin: 0 10px;
     font-weight: bold;
     color: #fff;
     border-radius: 5px;
     position: relative;
     z-index: 1;
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 .hero .cta-buttons .purchase {
