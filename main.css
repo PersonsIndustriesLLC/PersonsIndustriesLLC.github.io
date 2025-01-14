@@ -144,23 +144,23 @@ header nav a {
 }
 
 .services .service:nth-child(2) .icon-background {
-    background-color: #F2D1A3;
+    background-color: #4a6d85;
 }
 
 .services .service:nth-child(3) .icon-background {
-    background-color: #A3B18C;
+    background-color: #ff6f61;
 }
 
 .services .service:nth-child(4) .icon-background {
-    background-color: #776D5A;
+    background-color: #f1f1f1;
 }
 
 .services .service:nth-child(5) .icon-background {
-    background-color: #E68A2E;
+    background-color: #333333;
 }
 
 .services .service:nth-child(6) .icon-background {
-    background-color: #345830;
+    background-color: #e4d7b9;
 }
 
 .services .service h3 {
