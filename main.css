@@ -380,7 +380,7 @@ header nav a {
 }
 
 .contact-us button {
-    background-color: #274c69;
+    background-color: #152A3B;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -392,7 +392,7 @@ header nav a {
 }
 
 .contact-us button:hover {
-    background-color: #274c69;
+    background-color: #152A3B;
 }
 
 .contact-us .form-footer {
