@@ -104,6 +104,31 @@ header nav a {
     border: 2px solid #fff;
 }
 
+@media (max-width: 800px) {
+    .hero {
+        padding: 25vw 12vw;
+        background-size: cover;
+        background-position: right;
+    }
+
+    .hero h1 {
+        font-size: 4vw;
+        margin-left: -7vw;
+    }
+
+    .hero p {
+        visibility: hidden;
+    }
+
+    .hero .cta-buttons {
+        width: 100%;
+    }
+
+    header .logo img {
+        height: 25vw;
+    }
+}
+
 .services {
     display: flex;
     justify-content: space-around;
@@ -406,7 +431,7 @@ header nav a {
 }
 
 /* Responsive design adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .contact-us {
         padding: 30px 15px;
     }
@@ -424,7 +449,8 @@ header nav a {
     }
 
     .hero .cta-buttons a {
-        font-size: 2vw;
+        font-size: 4vw;
+        background-position: center;
     }
 }
 
