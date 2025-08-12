@@ -10,8 +10,10 @@
          <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico?">
     </head>
     <body>
-        <header>
-            <div class="logo"><img src="./images/LOGO-nobackground.png"></div>
+        <header id="header">
+            <div class="logo">
+                <img src="./images/LOGO-nobackground.png">
+            </div>
         </header>
 
         <section class="hero">
@@ -137,19 +139,6 @@
                 <button class="next-button">Next</button>
             </div>
             <script>
-                const heroSection = document.querySelector('.hero');
-                const header = document.querySelector('header');
-
-                window.addEventListener('scroll', function() {
-                    const heroBottom = heroSection.getBoundingClientRect().bottom;
-                    
-                    if (heroBottom <= 0) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                });
-
                 document.addEventListener("DOMContentLoaded", function() {
                     let currentIndex = 0;
                     const carousel = document.querySelector('.carousel');
@@ -223,23 +212,30 @@
             </div>
         </section><br>
         <script>
-            // Add event listener to handle form submission
+            document.addEventListener("DOMContentLoaded", () => {
+                const header = document.getElementById('header');
+                const headerHeight = 150;
+
+                window.addEventListener('scroll', () => {
+                    const scrollY = window.scrollY;
+                    const offset = Math.min(scrollY, headerHeight);
+                    header.style.transform = `translateY(-${offset}px)`;
+                });
+            });
+
             document.getElementById("contact-form").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent form from submitting (default action)
+                event.preventDefault();
         
-                // Get form values
                 var name = document.getElementById("name").value;
                 var email = document.getElementById("email").value;
                 var subject = document.getElementById("subject").value;
                 var message = document.getElementById("message").value;
         
-                // Construct the mailto link with the form data
-                var mailtoLink = "mailto:personsindustriesllc@gmail.com?subject=" + encodeURIComponent(subject) + 
+                var mailtoLink = "mailto:brandon.persons@personsindustries.com?subject=" + encodeURIComponent(subject) + 
                                  "&body=" + encodeURIComponent("Name: " + name + "\n" +
                                                                "Email: " + email + "\n" +
                                                                "Message: \n" + message);
-        
-                // Redirect to the mailto link to open the email client
+
                 window.location.href = mailtoLink;
             });
         </script>        
