@@ -1,278 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Persons Industries LLC</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="main.css">
-         <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico?">
-    </head>
-    <body>
-        <header id="header">
-            <div class="logo">
-                <img src="./images/LOGO-nobackground.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons Industries LLC - Engineering for the Future</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico?">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Social Media Bar -->
+    <div class="social-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/personsindustries" class="social-icon" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
             </div>
-        </header>
+        </div>
+    </div>
 
-        <section class="hero">
-            <h1>Engineering For The Future</h1>
-            <p>Empowering progress with innovative engineering solutions that deliver excellence and drive success.</p>
-            <div class="cta-buttons">
-                <a href="#contact-us" class="purchase">Contact Us</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img class="logo-image" src="images/LOGO-nobackground.png">
+                    <span>Persons Industries LLC</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section class="services-heading" id="services">
-            <br><h1>Our Services</h1>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Engineering for the Future</h1>
+                <p>Delivering mission-critical autonomous systems and full-stack software solutions with precision, innovation, and reliability</p>
+                <a href="services.html" class="btn-primary">Explore Capabilities</a>
+            </div>
+        </div>
+    </section>
 
-        <section class="services">
-            <div class="service">
-                <i class="bi bi-robot icon icon-background"></i>
-                <h3>AI & Autonomous Systems</h3>
-                <p>We offer comprehensive services in designing, programming, wiring, and modeling & simulating autonomous solutions, as well as AI. Our approach ensures the seamless integration of self-operating technologies, tailored to meet the specific needs and performance requirements of each client.</p>
-            </div>
-            <div class="service">
-                <i class="bi bi-code-square icon icon-background"></i>
-                <h3>Software Development</h3>
-                <p>We provide end-to-end software development services, including design, coding, testing, and deployment, tailored to meet your business needs. Our team ensures timely delivery, high-quality solutions, and post-launch support to ensure success.</p>
-            </div>
-            <div class="service">
-                <i class="bi bi-cpu icon icon-background"></i>
-                <h3>Electrical Circuits</h3>
-                <p>We provide expert electrical circuit design, ensuring custom solutions tailored to your needs, from concept to completion. Our repair and refurbishment services restore and optimize existing circuits, improving safety, performance, and longevity.</p>
-            </div>
-            <div class="service">
-                <i class="bi bi-window-fullscreen icon icon-background"></i>
-                <h3>Website Design</h3>
-                <p>We offer customized website design services tailored to your brand's unique needs, ensuring a seamless and engaging user experience. Our team combines creativity and functionality to build responsive, visually appealing websites that drive results.</p>
-            </div>
-            <div class="service">
-                <i class="bi bi-person-bounding-box icon icon-background"></i>
-                <h3>User Experience Design</h3>
-                <p>Our user-centric design approach prioritizes understanding and addressing the unique needs of users to create intuitive and engaging experiences. By applying research-driven methods, we ensure that every design decision enhances usability, accessibility, and satisfaction.</p>
-            </div>
-            <div class="service">
-                <i class="bi bi-pc-display icon icon-background"></i>
-                <h3>Computer Aided Design</h3>
-                <p>Our CAD services provide precise and innovative design solutions, utilizing advanced software to create detailed models and technical drawings. We specialize in turning your ideas into accurate, manufacturable plans, ensuring efficiency and quality throughout the design process.</p>
-            </div>
-        </section>
-
-        <section class="services-heading"  id="portfolio">
-            <h1>Portfolio</h1>
-        </section>
-
-        <section class="portfolio">
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel__cell">
-                        <div class="paper-card">
-                            <img src="./images/haztams_portfolio.jfif" alt="HAZTAMS" class="paper-image">
-                            <div class="paper-details">
-                                <h3><a href="https://firstmeritsolutions.com/about-haztams/" target="_blank">Hazard Tracking And Mitigation System (HAZTAMS)</a></h3>
-                                <p><strong>Work Status:</strong> 2023-Present</p>
-                                <p class="description">
-                                    Persons Industries LLC has successfully partnered with First Merit Solutions to implement and maintain the HAZTAMS Closed Loop Hazard Tracking System, supporting comprehensive System-of-Systems hazard analyses. Our team continues to ensure full compliance with MIL-STD-882E, DA PAM 385-16, and DI-SAFT-82085 standards while enhancing safety, efficiency, and risk management for ongoing projects through continuous system monitoring and expert safety engineering support.
-                                </p>
-                            </div>
-                        </div>
+    <!-- Engineering Information Section -->
+    <section class="engineering-info" id="engineering-info">
+        <div class="container">
+            <h2>Engineering Credentials</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <span class="info-label">CAGE Code</span>
                     </div>
-                    <div class="carousel__cell">
-                        <div class="paper-card">
-                            <img src="./images/teaas_portfolio.png" alt="TEAAS" class="paper-image">
-                            <div class="paper-details">
-                                <h3><a href="https://drive.google.com/file/d/1w6cdBEU2UV34xRP6Kp1kJLsr0h63kXq9" target="_blank">Test and Evaulation of AI-Enabled Autonomous Systems</a></h3>
-                                <p><strong>Work Status:</strong> 2024-Present</p>
-                                <p class="description">
-                                    Persons Industries LLC is proud to partner with MTSI on the Test and Evaluation of AI-Enabled Autonomous Systems (TEAAS®). This collaboration advances intelligent optimization, high-fidelity simulation, and AI-driven evaluation methods to improve safety, reliability, and performance. Together, we’re shaping the future of test and evaluation for complex autonomous systems in dynamic, mission-critical environments.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="info-value">9PPB2</div>
+                    <div class="info-status">Active</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                        <span class="info-label">UEI</span>
                     </div>
-                    <div class="carousel__cell">
-                        <div class="paper-card">
-                            <img src="./images/mrm_portfolio.jfif" alt="MRM" class="paper-image">
-                            <div class="paper-details">
-                                <h3><a href="https://www.midwestriskmanagement.com/" target="_blank">Midwest Risk Management AI</a></h3>
-                                <p><strong>Work Status:</strong> 2025-Present</p>
-                                <p class="description">
-                                    Persons Industries LLC is collaborating with Midwest Risk Management (MRM) to develop AI-driven robotics solutions for the construction industry. Our team provides end-to-end system design, including CAD, software development, AI model training, and electronics integration. This partnership enables advanced autonomous robotics that enhance efficiency, safety, and productivity on complex construction sites, helping to accelerate innovation and adoption of next-generation construction technology.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="info-value">SNJSUUPDRF13</div>
+                    <div class="info-status">Verified</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <span class="info-label">Completed Work</span>
                     </div>
-                    <div class="carousel__cell">
-                        <div class="paper-card">
-                            <img src="./images/ap_controller.jpg" alt="Controllers" class="paper-image">
-                            <div class="paper-details">
-                                <h3><a href="https://www.linkedin.com/company/persons-industries-llc" target="_blank">Hog Barn Controller Refurbishment</a></h3>
-                                <p><strong>Work Status:</strong> 2024-Present</p>
-                                <p class="description">
-                                    Our specialized refurbishment and repair services for AP controller boxes in hog barns ensure optimal performance and extended lifespan of your equipment. We expertly diagnose, repair, and upgrade your controller boxes to meet the latest industry standards, minimizing downtime and maximizing efficiency. With a focus on reliability and precision, our solutions help maintain a stable and productive environment for your operations, all while reducing the need for costly replacements. Trust our team to keep your hog barn systems running smoothly and cost-effectively.</p>
-                            </div>
-                        </div>
+                    <div class="info-value">3+</div>
+                    <div class="info-status">Delivered</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <span class="info-label">Active Projects</span>
                     </div>
-                    <div class="carousel__cell">
-                        <div class="paper-card">
-                            <img src="./images/erin.png" alt="ERIN Chatbot" class="paper-image">
-                            <div class="paper-details">
-                                <h3><a href="https://aisel.aisnet.org/sighci2020/21/" target="_blank">
-                                    Designing an Empathetic Chatbot and Exploring the Impact of Medium in its Experience and Adoption</a></h3>
-                                <p><strong>Conference:</strong> SIGHCI 2020</p>
-                                <p class="description">Grounded in the user experience driven innovation (UXDI) framework, we designed and developed a chatbot, ERIN, to help college students with finding resources about sensitive issues such as mental health and Title IX. Throughout the design process, the analysis of user interviews suggested that the service experience of the chat-bot and its adoption may strongly be influenced by the medium through which it is accessed.</p>
-                            </div>
-                        </div>
+                    <div class="info-value">4</div>
+                    <div class="info-status">In Progress</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Vision Values Section -->
+    <section class="mvv-section">
+        <div class="container">
+            <h2>Our Foundation</h2>
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Mission</h3>
+                    <p>Our mission is to help our partners solve difficult technical problems and realize their dreams through innovation, without compromise. We are dedicated to providing timely, well-engineered solutions tailored to meet the needs of every user.</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>Vision</h3>
+                    <p>To be an industry leader in autonomous and AI-driven solutions that define the future of safety, security, and efficiency across the defense, industrial, and agricultural sectors.  We envision a world where robotics and human-centric engineering eliminate hazardous tasks, allowing people to achieve their goals through a seamless, effective interface with technology. </p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Values</h3>
+                    <p>Transparency & Communication • Human-Centric Innovation • Relentless Work Ethic • Autonomous Initiative • Integrity & Humility</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customers Carousel Section -->
+    <section class="customers-section">
+        <div class="container">
+            <h2>Trusted By Industry Leaders</h2>
+            <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Customer logos will be duplicated for seamless loop -->
+                    <div class="carousel-item">
+                        <img src="images/mtsi_logo.jpg" alt="MTSI" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/first-merit-logo.webp" alt="First Merit Solutions" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/MRM.jpg" alt="Midwest Risk Management" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/lurod_services.PNG" alt="Lurod Services" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/GeauxGraphix.jpg" alt="Geaux Graphix" class="customer-logo">
+                    </div>
+                    <!-- Duplicated items for seamless loop -->
+                    <div class="carousel-item">
+                        <img src="images/mtsi_logo.jpg" alt="MTSI" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/first-merit-logo.webp" alt="First Merit Solutions" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/MRM.jpg" alt="Midwest Risk Management" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/lurod_services.PNG" alt="Lurod Services" class="customer-logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/GeauxGraphix.jpg" alt="Geaux Graphix" class="customer-logo">
                     </div>
                 </div>
             </div>
-            <div class="buttons-container">
-                <button class="previous-button">Previous</button>
-                <button class="next-button">Next</button>
-            </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    let currentIndex = 0;
-                    const carousel = document.querySelector('.carousel');
-                    const cells = document.querySelectorAll('.carousel__cell');
-                    const totalCells = cells.length;
-                    const previousButton = document.querySelector('.previous-button');
-                    const nextButton = document.querySelector('.next-button');
+        </div>
+    </section>
 
-                    function updateCarousel() {
-                        cells.forEach(cell => {
-                            cell.style.display = 'none';
-                        });
-
-                        cells[currentIndex].style.display = 'flex';
-                    }
-
-                    nextButton.addEventListener('click', () => {
-                        if (currentIndex + 1 >= totalCells) {
-                            currentIndex = 0;
-                        } else {
-                            currentIndex++;
-                        }
-                        updateCarousel();
-                    });
-
-                    previousButton.addEventListener('click', () => {
-                        if (currentIndex - 1 < 0) {
-                            currentIndex = totalCells - 1;
-                        } else {
-                            currentIndex--;
-                        }
-                        updateCarousel();
-                    });
-
-                    updateCarousel();
-                });
-            </script>
-        </section><br>
-
-        <section class="services-heading" id="contact-us">
-            <br><h1>Contact Us</h1>
-        </section>
-
-        <section class="contact-us">
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Persons Industries LLC</h4>
+                    <p>Engineering excellence in autonomous systems, full-stack software development, and mission-critical solutions.</p>
                 </div>
-        
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address" required>
-                </div>
-        
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" required>
-                </div>
-        
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-                </div>
-        
-                <button type="submit">Send Message</button>
-            </form>
-        
-            <div class="form-footer">
-                <p>We will get back to you as soon as possible!</p>
-            </div>
-        </section><br>
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-                const header = document.getElementById('header');
-                const headerHeight = 150;
-
-                window.addEventListener('scroll', () => {
-                    const scrollY = window.scrollY;
-                    const offset = Math.min(scrollY, headerHeight);
-                    header.style.transform = `translateY(-${offset}px)`;
-                });
-            });
-
-            document.getElementById("contact-form").addEventListener("submit", function(event) {
-                event.preventDefault();
-        
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var subject = document.getElementById("subject").value;
-                var message = document.getElementById("message").value;
-        
-                var mailtoLink = "mailto:brandon.persons@personsindustries.com?subject=" + encodeURIComponent(subject) + 
-                                 "&body=" + encodeURIComponent("Name: " + name + "\n" +
-                                                               "Email: " + email + "\n" +
-                                                               "Message: \n" + message);
-
-                window.location.href = mailtoLink;
-            });
-        </script>        
-
-        <section class="services-heading">
-            <br><h1>Our Customers</h1><br>
-        </section>
-
-        <section class="customer-logos">
-            <div class="slider">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="./images/MRM.jpg" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/mtsi_logo.jpg" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/first-merit-logo.webp" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/lurod_services.PNG" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/GeauxGraphix.jpg" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/MRM.jpg" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/mtsi_logo.jpg" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/first-merit-logo.webp" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/lurod_services.PNG" height="100" width="100" alt="" />
-                    </div>
-                    <div class="slide">
-                        <img src="./images/GeauxGraphix.jpg" height="100" width="100" alt="" />
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href=https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/personsindustries" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section><br><br>
-    </body>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Persons Industries LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>
