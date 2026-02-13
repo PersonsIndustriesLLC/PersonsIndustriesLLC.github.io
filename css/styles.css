@@ -452,7 +452,7 @@ img {
 .carousel-track {
     display: flex;
     gap: 4rem;
-    animation: scroll 8s linear infinite;
+    animation: scroll 15s linear infinite;
 }
 
 .carousel-track:hover {
