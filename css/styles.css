@@ -468,7 +468,7 @@ img {
 }
 
 .customer-logo {
-    max-height: 80px;
+    max-height: 100px;
     width: auto;
     opacity: 0.85;
     transition: var(--transition-base);
