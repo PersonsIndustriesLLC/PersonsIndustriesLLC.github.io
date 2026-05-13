@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.personsindustries.com/blog-remote-engineering.html" />
+    <title>Remote Engineering Isn't the Tradeoff People Think It Is | Persons Industries Blog</title>
+    <meta name="description" content="When remote engineering is done with real operational discipline, it doesn't degrade performance - it exposes whether an organization knows how to run engineering at all.">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico?">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Remote Engineering Isn't the Tradeoff People Think It Is",
+        "description": "When remote engineering is done with operational discipline, it exposes management maturity rather than degrading performance.",
+        "url": "https://www.personsindustries.com/blog-remote-engineering.html",
+        "datePublished": "2026-05-01",
+        "publisher": {
+            "@type": "ProfessionalService",
+            "name": "Persons Industries LLC",
+            "url": "https://www.personsindustries.com"
+        }
+    }
+    </script>
+
+    <style>
+        /* ===== Blog Post Page Styles ===== */
+        .blog-post-section {
+            padding: 4rem 0 6rem;
+            background-color: var(--white);
+        }
+
+        .blog-post-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        /* ---- Article ---- */
+        .blog-post-article {
+            max-width: 720px;
+        }
+
+        .blog-post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .blog-post-category {
+            display: inline-block;
+            padding: 0.3rem 0.85rem;
+            background-color: var(--navy-blue);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-post-title {
+            font-size: 2.4rem;
+            line-height: 1.25;
+            color: var(--navy-blue);
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-post-byline {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--light-grey);
+            padding-bottom: 1.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .blog-post-byline span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* ---- Post Body Typography ---- */
+        .blog-post-body h2 {
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+            margin-top: 2.75rem;
+            margin-bottom: 1rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .blog-post-body h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .blog-post-body p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 1.25rem;
+        }
+
+        .blog-post-body ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .blog-post-body ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .blog-post-body ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--navy-blue);
+            font-weight: 600;
+        }
+
+        .blog-post-body .pull-quote {
+            border-left: 4px solid var(--navy-blue);
+            padding: 1.25rem 1.75rem;
+            margin: 2rem 0;
+            background-color: var(--off-white);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .blog-post-body .pull-quote p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+            font-style: italic;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ---- Internal Link Callouts ---- */
+        .internal-link-callout {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.1rem 1.5rem;
+            background-color: var(--off-white);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 0 8px 8px 0;
+            margin: 1.75rem 0;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-base);
+        }
+
+        .internal-link-callout:hover {
+            border-left-color: var(--navy-blue);
+            box-shadow: var(--shadow-sm);
+            transform: translateX(3px);
+        }
+
+        .internal-link-callout svg {
+            flex-shrink: 0;
+            color: var(--navy-blue);
+        }
+
+        .internal-link-callout .link-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--light-grey);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .internal-link-callout .link-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+
+        /* ---- Sidebar ---- */
+        .blog-sidebar {
+            position: sticky;
+            top: 90px;
+        }
+
+        .sidebar-card {
+            background-color: var(--off-white);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            padding: 1.75rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .sidebar-card h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--navy-blue);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toc-list li a {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            display: block;
+            padding: 0.3rem 0;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            transition: var(--transition-base);
+        }
+
+        .toc-list li a:hover {
+            color: var(--navy-blue);
+            border-left-color: var(--navy-blue);
+        }
+
+        .sidebar-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .sidebar-tag {
+            padding: 0.3rem 0.7rem;
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.775rem;
+            color: var(--text-light);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--navy-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-base);
+        }
+
+        .back-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* ---- Post Footer ---- */
+        .blog-post-footer {
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .blog-post-footer h4 {
+            color: var(--navy-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-post-footer p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 968px) {
+            .blog-post-layout {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .blog-sidebar {
+                position: static;
+            }
+            .blog-post-title {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .blog-post-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Media Bar -->
+    <div class="social-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/personsindustries" class="social-icon" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img class="logo-image" src="../images/LOGO-nobackground.png" alt="Persons Industries Logo">
+                    <span>Persons Industries</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="https://www.personsindustries.com/">Home</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../news.html">News</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../blog.html" class="active">Blog</a></li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header / Breadcrumb -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="https://www.personsindustries.com/">Home</a>
+                <span>→</span>
+                <a href="blog.html">Blog</a>
+                <span>→</span>
+                <span>Remote Engineering</span>
+            </div>
+            <h1>Engineering Insights</h1>
+        </div>
+    </div>
+
+    <!-- Blog Post Section -->
+    <section class="blog-post-section">
+        <div class="container">
+
+            <a href="../blog.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back to all posts
+            </a>
+
+            <div class="blog-post-layout">
+
+                <!-- ===== Main Article ===== -->
+                <article class="blog-post-article">
+
+                    <header class="blog-post-header">
+                        <span class="blog-post-category">Engineering Operations</span>
+                        <h1 class="blog-post-title">Remote Engineering Isn't the Tradeoff People Think It Is</h1>
+                        <div class="blog-post-byline">
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                May 2026
+                            </span>
+                            <span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                7 min read
+                            </span>
+                            <span>Persons Industries</span>
+                        </div>
+                    </header>
+
+                    <!-- ===== Article Body ===== -->
+                    <div class="blog-post-body">
+
+                        <p>There's a quiet assumption in a lot of engineering organizations that still hasn't been challenged properly: remote work is something you accept if you can't make in-person work "real." That framing is backwards.</p>
+
+                        <p>In practice, we've seen the opposite pattern hold - repeatedly and at different scales. When remote engineering is done with real operational discipline, it doesn't degrade engineering performance. It exposes whether an organization knows how to run engineering at all.</p>
+
+                        <div class="pull-quote">
+                            <p>Remote doesn't break good systems. It exposes weak ones. And most of what gets labeled as "remote failure" is actually something else entirely.</p>
+                        </div>
+
+                        <img src="../images/distributed-team.jpg" alt="Distributed Agile Development Team">
+
+                        <h2 id="management-maturity">Remote doesn't fail engineering. It reveals management maturity.</h2>
+
+                        <p>The most consistent pattern we've seen across distributed engineering teams is this: if a company struggles with remote engineering, the root cause is almost never "remote." It's that they were never managing through output in the first place. They were managing through presence.</p>
+
+                        <p>In-office environments can hide that for a long time. You can infer productivity from activity. You can equate responsiveness with progress. You can use proximity as a proxy for trust. Remote removes all of that. What's left is uncomfortable:</p>
+
+                        <ul>
+                            <li>Work either ships or it doesn't</li>
+                            <li>Decisions are either clear or they aren't</li>
+                            <li>Blockers are either surfaced or they silently accumulate</li>
+                        </ul>
+
+                        <p>There's nowhere for ambiguity to hide. And that's why remote feels harder for many organizations - not because it is harder, but because it's more honest.</p>
+
+                        <!-- Internal Link 1: Services -->
+                        <a href="../services.html" class="internal-link-callout">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round">
+
+                                <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                                <polyline points="15 8 19 12 15 16"></polyline>
+                                <polyline points="9 8 5 12 9 16"></polyline>
+                            </svg>
+                            <div>
+                                <span class="link-label">Our Services</span>
+                                <span class="link-title">See how Persons Industries structures distributed engineering engagements →</span>
+                            </div>
+                        </a>
+
+                        <h2 id="async-systems">Async-first systems don't slow decisions down - they improve them</h2>
+
+                        <p>There's a persistent myth that asynchronous communication slows engineering velocity. What actually slows engineering is rework caused by unclear thinking. Async systems force a different constraint: decisions must be written down before they are executed.</p>
+
+                        <p>That constraint changes behavior. Teams that adopt real async practices - not just "we use Slack," but actual written decision-making - consistently produce:</p>
+
+                        <ul>
+                            <li>Clearer architecture decisions</li>
+                            <li>Fewer contradictory implementations</li>
+                            <li>Better institutional memory</li>
+                            <li>Significantly less "what did we agree on again?" drift</li>
+                        </ul>
+
+                        <p>The key difference is that async doesn't optimize for speed of conversation. It optimizes for durability of understanding. And durable understanding scales in a way meetings never do.</p>
+
+                        <h2 id="high-leverage-engineers">The best engineers don't just tolerate remote - they are optimized for it</h2>
+
+                        <p>There's a version of this conversation that's still common in leadership circles: "Remote works for some people, but not for everyone." That's true, but incomplete. The more precise observation is that the traits making someone a high-leverage engineer in complex systems are the same traits that make them highly effective in remote environments:</p>
+
+                        <ul>
+                            <li>Deep focus over constant context switching</li>
+                            <li>Strong written communication</li>
+                            <li>Comfort with autonomy and ambiguity</li>
+                            <li>Low dependency on ambient validation</li>
+                        </ul>
+
+                        <p>In co-located environments, these engineers often get interrupted the most - because they're seen as available. In remote environments, those same engineers get protected by structure. Not by accident - by design. That difference shows up directly in output quality.</p>
+
+                        <img src="../images/results-based-management.png" alt="Results Based Management Model">
+
+                        <h2 id="rto-arguments">Most RTO arguments are solving the wrong problem</h2>
+
+                        <p>A lot of return-to-office narratives are framed around collaboration, culture, or productivity. But when you look closely at the operational reality, a different pattern appears: the organization doesn't actually know how to measure output. So it defaults to measuring visibility instead.</p>
+
+                        <ul>
+                            <li>Proximity becomes a substitute for clarity</li>
+                            <li>Activity becomes a substitute for progress</li>
+                            <li>Attendance becomes a substitute for trust</li>
+                        </ul>
+
+                        <p>That works - until it doesn't. And when it stops working, the response is often to increase presence requirements rather than fix the underlying system of management. Which is why many RTO mandates feel less like a strategic decision and more like a regression to what's easiest to observe.</p>
+
+                        <!-- Internal Link 2: Projects -->
+                        <a href="../projects.html" class="internal-link-callout">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <div>
+                                <span class="link-label">Our Projects</span>
+                                <span class="link-title">Explore how our distributed team delivers complex autonomous systems projects →</span>
+                            </div>
+                        </a>
+
+                        <h2 id="system-design">Remote engineering only works when the system is designed for it</h2>
+
+                        <p>There's a version of remote engineering that is genuinely fragile - the version most companies accidentally build:</p>
+
+                        <ul>
+                            <li>Undocumented decisions</li>
+                            <li>Informal architecture knowledge</li>
+                            <li>Unclear ownership boundaries</li>
+                            <li>Inconsistent definitions of "done"</li>
+                            <li>Meetings used as the primary coordination mechanism</li>
+                        </ul>
+
+                        <p>In that environment, distance amplifies dysfunction. But that's not a remote problem. That's a system design problem. The teams that succeed with distributed engineering share a different set of constraints: decisions are written, not remembered; architecture is explicit, not tribal; blockers are surfaced immediately in writing; and ownership is unambiguous across time zones.</p>
+
+                        <p>In other words, remote doesn't remove coordination. It forces coordination to become visible.</p>
+
+                        <h2 id="real-divide">The real divide in engineering organizations</h2>
+
+                        <p>At this point, the remote debate is often framed incorrectly. It's not really remote vs in-office. It's something deeper: presence-managed organizations versus output-managed organizations. Presence-managed organizations need proximity because it substitutes for measurement. Output-managed organizations don't.</p>
+
+                        <p>Once you see that distinction clearly, a lot of patterns stop being mysterious - why some remote teams feel chaotic while others feel calm, why some in-office teams still fail despite being co-located, why senior engineers often prefer distributed environments, and why "collaboration" is often used as a catch-all justification for structural issues. The location is not the variable that matters most. The management model is.</p>
+
+                        <h2 id="closing">Closing thought</h2>
+
+                        <p>If you zoom out, the implication is simple but uncomfortable for many organizations: remote engineering doesn't create performance differences. It amplifies them. Good engineering systems become more scalable, more documented, and more resilient. Weak engineering systems become more exposed, more fragmented, and more expensive.</p>
+
+                        <div class="pull-quote">
+                            <p>If your engineering system depends on physical presence to function, you don't have a location problem. You have a system design problem. And location was never going to fix that.</p>
+                        </div>
+
+                        <!-- Internal Link 3: About -->
+                        <a href="../about.html" class="internal-link-callout">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <div>
+                                <span class="link-label">About Us</span>
+                                <span class="link-title">Learn how Persons Industries is built around clarity as a design constraint →</span>
+                            </div>
+                        </a>
+
+                    </div><!-- /.blog-post-body -->
+
+                    <!-- Post Footer -->
+                    <footer class="blog-post-footer">
+                        <h4>About Persons Industries</h4>
+                        <p>At Persons Industries, we've found that the strongest outcomes in AI, autonomy, and distributed engineering systems come from treating clarity as a design constraint - not an aspiration. If that way of thinking aligns with how you build, we're usually brought in when teams want to scale execution without losing technical rigor.</p>
+                    </footer>
+
+                </article>
+
+                <!-- ===== Sidebar ===== -->
+                <aside class="blog-sidebar">
+
+                    <div class="sidebar-card">
+                        <h4>In This Post</h4>
+                        <ul class="toc-list">
+                            <li><a href="#management-maturity">Management Maturity</a></li>
+                            <li><a href="#async-systems">Async-First Systems</a></li>
+                            <li><a href="#high-leverage-engineers">High-Leverage Engineers</a></li>
+                            <li><a href="#rto-arguments">RTO Arguments</a></li>
+                            <li><a href="#system-design">System Design</a></li>
+                            <li><a href="#real-divide">The Real Divide</a></li>
+                            <li><a href="#closing">Closing Thought</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>Tags</h4>
+                        <div class="sidebar-tags">
+                            <span class="sidebar-tag">Remote Engineering</span>
+                            <span class="sidebar-tag">Engineering Management</span>
+                            <span class="sidebar-tag">Async Work</span>
+                            <span class="sidebar-tag">Distributed Teams</span>
+                            <span class="sidebar-tag">Output Management</span>
+                            <span class="sidebar-tag">Systems Design</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h4>More from Persons Industries</h4>
+                        <ul class="toc-list">
+                            <li><a href="../services.html">Our Engineering Services</a></li>
+                            <li><a href="../projects.html">Active Projects</a></li>
+                            <li><a href="../about.html">About the Team</a></li>
+                            <li><a href="../news.html">News & Updates</a></li>
+                        </ul>
+                    </div>
+
+                </aside>
+
+            </div><!-- /.blog-post-layout -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Persons Industries LLC</h4>
+                    <p>Engineering excellence in autonomous systems, robotics, and mission-critical solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/personsindustries" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Persons Industries LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

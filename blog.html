@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.personsindustries.com/blog.html" />
+    <title>Engineering Blog | Insights & Analysis | Persons Industries</title>
+    <meta name="description" content="Engineering insights, technical analysis, and perspectives on autonomous systems, AI, distributed teams, and software development from Persons Industries.">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico?">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Persons Industries Engineering Blog",
+        "url": "https://www.personsindustries.com/blog.html",
+        "description": "Engineering insights and technical perspectives from Persons Industries LLC.",
+        "publisher": {
+            "@type": "ProfessionalService",
+            "name": "Persons Industries LLC",
+            "url": "https://www.personsindustries.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.personsindustries.com/images/LOGO-nobackground.png"
+            },
+            "telephone": "+1-641-226-7767",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Huntsville",
+                "addressRegion": "AL",
+                "addressCountry": "US"
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* ===== Blog Listing Page Styles ===== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            padding: 2rem;
+            background-color: var(--off-white);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--navy-blue);
+        }
+
+        .blog-card-category {
+            display: inline-block;
+            padding: 0.3rem 0.75rem;
+            background-color: var(--navy-blue);
+            color: var(--white);
+            font-size: 0.72rem;
+            font-weight: 600;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+
+        .blog-card-icon {
+            margin-bottom: 1.25rem;
+            color: var(--navy-blue);
+        }
+
+        .blog-card h3 {
+            color: var(--navy-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.8rem;
+            color: var(--light-grey);
+        }
+
+        .blog-card-meta .read-more {
+            color: var(--navy-blue);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition-base);
+        }
+
+        .blog-card:hover .read-more {
+            gap: 0.65rem;
+        }
+
+        .blog-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Media Bar -->
+    <div class="social-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/personsindustries" class="social-icon" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img class="logo-image" src="images/LOGO-nobackground.png" alt="Persons Industries Logo">
+                    <span>Persons Industries</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="https://www.personsindustries.com/">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="https://www.personsindustries.com/">Home</a>
+                <span>→</span>
+                <span>Blog</span>
+            </div>
+            <h1>Engineering Insights & Analysis</h1>
+        </div>
+    </div>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <p class="section-intro">Perspectives on autonomous systems, distributed engineering, AI development, and the operational disciplines that separate high-performing teams from the rest.</p>
+
+            <div class="blog-grid">
+
+                <!-- Post 1: Remote Engineering -->
+                <a href="blog/blog-remote-engineering.html" class="blog-card">
+                    <span class="blog-card-category">Engineering Operations</span>
+                    <div class="blog-card-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                            <circle cx="7" cy="10" r="1.5"></circle>
+                            <circle cx="17" cy="10" r="1.5"></circle>
+                            <path d="M10 10h4"></path>
+                        </svg>
+                    </div>
+                    <h3>Remote Engineering Isn't the Tradeoff People Think It Is</h3>
+                    <p>The quiet assumption that remote work is something you accept when in-person isn't "real" has it backwards. When done with operational discipline, distributed engineering doesn't degrade performance — it reveals whether your organization knows how to run engineering at all.</p>
+                    <div class="blog-card-meta">
+                        <span>May 2026 &nbsp;·&nbsp; 7 min read</span>
+                        <span class="read-more">
+                            Read post
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Placeholder Post 2 -->
+                <div class="blog-card project-placeholder" style="min-height:320px;">
+                    <div class="placeholder-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 5v14M5 12h14"></path>
+                        </svg>
+                    </div>
+                    <h3 style="color:var(--light-grey); min-height:unset;">More Posts Coming Soon</h3>
+                    <p style="margin-bottom:0;">Additional insights on autonomous systems, AI integration, and systems engineering are on the way.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Persons Industries LLC</h4>
+                    <p>Engineering excellence in autonomous systems, robotics, and mission-critical solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/persons-industries-llc" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/share/1AJ593AYjT/?mibextid=wwXlfr" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/personsindustries" class="social-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Persons Industries LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
