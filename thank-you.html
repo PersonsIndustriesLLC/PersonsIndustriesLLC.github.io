@@ -8,57 +8,46 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .thank-you-section {
-            min-height: 70vh;
+            min-height: 65vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
-        
+
         .thank-you-content {
             max-width: 600px;
+            margin: 0 auto;
         }
-        
+
         .thank-you-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 84px;
+            height: 84px;
             margin: 0 auto 2rem;
-            color: var(--navy-blue);
+            color: var(--olive-light);
+            background-color: var(--bg-2);
+            border: 1px solid var(--border-strong);
+            border-radius: 50%;
         }
-        
+
         .thank-you-content h1 {
             margin-bottom: 1rem;
         }
-        
+
         .thank-you-content p {
-            font-size: 1.125rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            margin-bottom: 2.25rem;
         }
-        
+
         .button-group {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
-        }
-        
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            background-color: transparent;
-            color: var(--navy-blue);
-            font-weight: 600;
-            border: 2px solid var(--navy-blue);
-            border-radius: 4px;
-            cursor: pointer;
-            transition: var(--transition-base);
-        }
-        
-        .btn-secondary:hover {
-            background-color: var(--navy-blue);
-            color: var(--white);
-            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -95,16 +84,16 @@
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <img class="logo-image" src="images/LOGO-nobackground.png">
+                    <img class="logo-image" src="images/LOGO-nobackground.png" alt="Persons Industries logo">
                     <span>Persons Industries</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="https://www.personsindustries.com/">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="news.html">News</a></li>
-                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="about.html#contact">Contact</a></li>
                 </ul>
                 <button class="mobile-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -120,7 +109,7 @@
         <div class="container">
             <div class="thank-you-content">
                 <div class="thank-you-icon">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                         <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
@@ -141,7 +130,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Persons Industries LLC</h4>
-                    <p>Engineering excellence in autonomous systems, robotics, and mission-critical solutions.</p>
+                    <p>Engineering | Fabrication | Automation — integrated mechanical, electrical, and software engineering for agriculture, defense, and industrial.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Connect</h4>

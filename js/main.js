@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileNav();
     initStickyNav();
     initCarousel();
+    initProjectCarousels();
     initSmoothScroll();
 });
 
@@ -66,6 +67,51 @@ function initStickyNav() {
             lastScroll = currentScroll;
         });
     }
+}
+
+// ========== Project Media Carousels ==========
+function initProjectCarousels() {
+    const mediaBlocks = document.querySelectorAll('.project-media[data-carousel]');
+
+    mediaBlocks.forEach(media => {
+        const track = media.querySelector('.project-media-track');
+        const slides = media.querySelectorAll('.project-media-slide');
+        const dotsContainer = media.querySelector('.project-media-dots');
+        const prevBtn = media.querySelector('.project-media-nav.prev');
+        const nextBtn = media.querySelector('.project-media-nav.next');
+
+        // Single-image cards don't need carousel controls
+        if (slides.length <= 1) return;
+
+        let index = 0;
+
+        if (dotsContainer) {
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.className = 'project-media-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', 'Go to image ' + (i + 1));
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            if (dotsContainer) {
+                dotsContainer.querySelectorAll('.project-media-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+        }
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            update();
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
+    });
 }
 
 // ========== Automatic Carousel ==========
